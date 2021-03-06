@@ -1,7 +1,6 @@
 import React, { useEffect, useState } from 'react'
-import axios from 'axios'
 import { useHistory } from 'react-router-dom'
-import useApi from 'pages/Promotion/utils/useApi'
+import useApi from 'components/utils/useApi'
 import './Form.css'
 
 const initialValue = {
@@ -36,6 +35,7 @@ const PromotionForm = ({ id }) => {
     if (id) {
       load()
     }
+    //eslint-disable-next-line react-hooks/exhaustive-deps
   }, [id])
 
   function onChange(ev) {

@@ -1,5 +1,6 @@
 import { useState } from 'react'
 import axios from 'axios'
+import useDebouncedPromise from 'components/utils/useDebouncedPromise'
 
 const initialRequestInfo = {
   error: null,
@@ -9,6 +10,7 @@ const initialRequestInfo = {
 
 export default function useApi(config) {
   const [requestInfo, setRequestInfo] = useState(initialRequestInfo)
+  const debouncedAxios = useDebouncedPromise(axios, config.debouncedDelay)
 
   async function call(localconfig) {
     setRequestInfo({
@@ -16,12 +18,14 @@ export default function useApi(config) {
       loading: true,
     })
     let response = null
+    const finalConfig = {
+      baseURL: 'http://localhost:5000',
+      ...config,
+      ...localconfig,
+    }
+    const fn = finalConfig.debauced ? debouncedAxios : axios
     try {
-      response = await axios({
-        baseURL: 'http://localhost:5000',
-        ...config,
-        ...localconfig,
-      })
+      response = await fn(finalConfig)
       setRequestInfo({
         ...initialRequestInfo,
         data: response.data,
