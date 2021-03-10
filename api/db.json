@@ -67,6 +67,88 @@
       "promotionId": 2,
       "comment": "teste",
       "id": 4
+    },
+    {
+      "userId": 1,
+      "promotionId": 2,
+      "comment": "teste resposta",
+      "parentId": 4,
+      "id": 5
+    },
+    {
+      "userId": 1,
+      "promotionId": 2,
+      "comment": "teste",
+      "parentId": 3,
+      "id": 6
+    },
+    {
+      "userId": 1,
+      "promotionId": 2,
+      "comment": "teste",
+      "parentId": 6,
+      "id": 7
+    },
+    {
+      "userId": 1,
+      "promotionId": 2,
+      "comment": "aa",
+      "parentId": 6,
+      "id": 8
+    },
+    {
+      "userId": 1,
+      "promotionId": 2,
+      "comment": "teste",
+      "parentId": 2,
+      "id": 9
+    },
+    {
+      "userId": 1,
+      "promotionId": 2,
+      "comment": "teste",
+      "parentId": 9,
+      "id": 10
+    },
+    {
+      "userId": 1,
+      "promotionId": 2,
+      "comment": "tes",
+      "parentId": 9,
+      "id": 11
+    },
+    {
+      "userId": 1,
+      "promotionId": 2,
+      "comment": "teste",
+      "id": 12
+    },
+    {
+      "userId": 1,
+      "promotionId": 4,
+      "comment": "primeiro comentario",
+      "id": 13
+    },
+    {
+      "userId": 1,
+      "promotionId": 4,
+      "comment": "resposta primeiro comentario",
+      "parentId": 13,
+      "id": 14
+    },
+    {
+      "userId": 1,
+      "promotionId": 4,
+      "comment": "resposta resposta",
+      "parentId": 14,
+      "id": 15
+    },
+    {
+      "userId": 1,
+      "promotionId": 2,
+      "comment": "bb",
+      "parentId": 9,
+      "id": 16
     }
   ],
   "users": [
