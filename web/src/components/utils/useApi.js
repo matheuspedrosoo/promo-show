@@ -21,6 +21,7 @@ export default function useApi(config) {
       ...config,
       ...localconfig,
     }
+
     if (finalConfig.isFetchMore) {
       setRequestInfo({
         ...initialRequestInfo,
