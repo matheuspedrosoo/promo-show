@@ -21,6 +21,8 @@ const UIInfinitScroll = ({ fetchMore }) => {
     return () => {
       observer.disconnect()
     }
+
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [])
 
   return <div ref={containerRef} />
